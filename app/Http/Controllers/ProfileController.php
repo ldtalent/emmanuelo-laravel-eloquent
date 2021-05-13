@@ -36,8 +36,13 @@ class ProfileController extends Controller
 
     	$user = User::find(Auth::id());
 
+    	/*
+    		Eager load profile relationship using tht with() function for faster loading
+    		$user = User::with('profile')->find(Auth::id());
+    	*/
+
     	return view('profile', compact('user'));
 
-    }
+    }   
 
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e95a0b086fb19bc9aeec70dfffaeceb",
+    "content-hash": "de8a68dbfa8140d2500e161092c84531",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -117,6 +117,66 @@
                 }
             ],
             "time": "2021-01-20T22:51:39+00:00"
+        },
+        {
+            "name": "darkghosthunter/rememberable-query",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DarkGhostHunter/RememberableQuery.git",
+                "reference": "dd8e3fc4f35141ac3143f2401055bc7bd86a88c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DarkGhostHunter/RememberableQuery/zipball/dd8e3fc4f35141ac3143f2401055bc7bd86a88c3",
+                "reference": "dd8e3fc4f35141ac3143f2401055bc7bd86a88c3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "6.*|7.*",
+                "php": "^7.2.15"
+            },
+            "require-dev": {
+                "orchestra/testbench": ">4.0|5.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DarkGhostHunter\\RememberableQuery\\RememberableQueryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DarkGhostHunter\\RememberableQuery\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Italo Israel Baeza Cabrera",
+                    "email": "darkghosthunter@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Remember a Query results in one expressive line",
+            "homepage": "https://github.com/darkghosthunter/rememberablequery",
+            "keywords": [
+                "cache",
+                "darkghosthunter",
+                "database",
+                "laravel",
+                "sql"
+            ],
+            "support": {
+                "issues": "https://github.com/DarkGhostHunter/RememberableQuery/issues",
+                "source": "https://github.com/DarkGhostHunter/RememberableQuery/tree/stable"
+            },
+            "time": "2020-03-05T16:35:06+00:00"
         },
         {
             "name": "doctrine/inflector",

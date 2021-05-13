@@ -17,7 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('fake-posts','PostController@fakePosts')->name('fake-posts');
+Route::get('fake-posts','PostController@fakePosts')->name('fake-posts');
+Route::get('query-posts','PostController@queryPosts')->name('query-posts');
+Route::get('delete-posts','PostController@deletePosts')->name('delete-posts');
+Route::get('update-posts','PostController@updatePosts')->name('update-posts');
+
+Route::get('view-profile','ProfileController@index')->name('view-profile');
 
 Auth::routes();
 
