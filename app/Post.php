@@ -18,6 +18,10 @@ class Post extends Model
 {
     protected $guarded = ['id'];
 
+    /**
+     * A post belongs to a user
+     * @return void
+     */
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -19,6 +19,10 @@ use App\User;
 
 use Auth;
 
+/**
+ * This controller handles all the posts related functionalities
+ * [PostController]
+ */
 class PostController extends Controller
 {
 
@@ -32,7 +36,12 @@ class PostController extends Controller
         $this->middleware('auth');
     }
 
-    /*Fake a user's posts with the specified number ... */
+    /**
+	 * Fake a user's posts with the specified number ...
+     * @param Request $request
+     * 
+     * @return void
+     */
     public function fakePosts(Request $request)
     {
 
@@ -83,8 +92,13 @@ class PostController extends Controller
 
     }
 
-    /*Query all logged in user posts*/
 
+    /**
+	 * Query all logged in user posts
+     * @param Request $request
+     * 
+     * @return void
+     */
     public function queryPosts(Request $request)
     {
 
@@ -113,8 +127,12 @@ class PostController extends Controller
 
     }
 
-    /*Delete all logged in user posts*/
-
+    /**
+	 * Delete all logged in user posts
+     * @param Request $request
+     * 
+     * @return void
+     */
     public function deletePosts(Request $request)
     {
 
@@ -143,8 +161,12 @@ class PostController extends Controller
 
     } 
 
-    /*Update all logged in user posts*/
-
+    /**
+	 * Update all logged in user posts
+     * @param Request $request
+     * 
+     * @return void
+     */
     public function updatePosts(Request $request)
     {
 

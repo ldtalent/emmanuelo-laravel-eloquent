@@ -18,6 +18,9 @@ use App\User;
 
 use Auth;
 
+/**
+ * [ProfileController]
+ */
 class ProfileController extends Controller
 {
 
@@ -31,6 +34,10 @@ class ProfileController extends Controller
     	$this->middleware('auth');
     }
 
+    /**
+     * 
+     * @return void
+     */
     public function index()
     {
 

@@ -19,6 +19,10 @@ class Profile extends Model
 	
     protected $guarded = ['id'];
 
+    /**
+     * A profile belongs a user
+     * @return void
+     */
     public function user()
     {
         return $this->belongsTo(User::class);

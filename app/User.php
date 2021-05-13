@@ -47,11 +47,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * A user has many posts
+     * @return void
+     */
     public function posts()
     {
         return $this->hasMany(Post::class);
     }
 
+    /**
+     * A user has one profile
+     * @return void
+     */
     public function profile()
     {
         return $this->hasOne(Profile::class);
