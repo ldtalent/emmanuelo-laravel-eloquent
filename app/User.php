@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * User
+ *
+ * @author      Obua Emmanuel <eobua6882@gmail.com>
+ * @copyright   2021 Obua Emmanuel
+ * @link        http://emmanuelobua.me
+ * @version     1.0.0
+ *
+ */
+
 namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -44,7 +54,7 @@ class User extends Authenticatable
 
     public function profile()
     {
-        return $this->hasMany(Profile::class);
+        return $this->hasOne(Profile::class);
     }
 
 }

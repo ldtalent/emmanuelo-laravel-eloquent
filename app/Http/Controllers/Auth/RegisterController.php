@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Profile;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -64,10 +65,30 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        Profile::create([
+            'user_id'       => $user->id,
+            'profession'    => $data['profession']
+        ]);
+
+        /*Or call the relationship as a function to return the profile model instance 
+        * and call the normal create method, in this case the user_id field is added automatically behind the scene,
+        * all you need to do is add other fields apart from user_id to the array. 
+        */
+
+        /*
+            $user->profile()->create([
+                'profession' => $data['profession']
+            ]);
+        */
+
+        return $user;
+
     }
 }

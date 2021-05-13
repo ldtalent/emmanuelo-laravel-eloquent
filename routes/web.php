@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('fake-posts','PostController@fakePosts')->name('fake-posts');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

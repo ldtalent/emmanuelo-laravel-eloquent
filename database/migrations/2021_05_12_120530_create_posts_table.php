@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * CreatePostsTable
+ *
+ * @author      Obua Emmanuel <eobua6882@gmail.com>
+ * @copyright   2021 Obua Emmanuel
+ * @link        http://emmanuelobua.me
+ * @version     1.0.0
+ *
+ */
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

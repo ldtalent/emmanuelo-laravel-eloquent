@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 //Add the schema facade
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Blade;
+use App\View\Components\Alert as AlertComponent;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,10 +18,13 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-      	//Provide migration string() function default value.
+
+		Blade::component('alert', AlertComponent::class);
+
+		//Provide migration string() function default value.
 		Schema::defaultStringLength(191);
 
-      	//Register laravel telescope service provider only when the application is in local environment
+		//Register laravel telescope service provider only when the application is in local environment
 		if ($this->app->isLocal()) {
 			$this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
 			$this->app->register(TelescopeServiceProvider::class);
