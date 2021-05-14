@@ -29,6 +29,8 @@ composer install
 npm install && npm run dev
 ```
 
+Modify the content of .env file to match your database credentials.
+
 ```php
 php artisan serve
 ```
