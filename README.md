@@ -35,6 +35,21 @@ Modify the content of .env file to match your database credentials.
 php artisan serve
 ```
 
+# Query Caching
+####  This package shall aid caching queries with similar output for faster quering of records
+```Composer
+composer require darkghosthunter/rememberable-query
+```
+# Usage
+```php
+/*
+Call the remember method on a model and provide the duration in hours, for this case it's one hour. Queries are cached so that the next time you query similar information, it's retrieved from cache and returns faster. 
+*/
+
+$user = User::with('posts')->remember(60 * 60)->find(Auth::id());
+```
+#
+
 - Navigate to http://localhost:8000 to load the landing page
 - To visualize laravel telescope analytics, follow http://localhost:8000/telescope
 

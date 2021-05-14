@@ -105,14 +105,14 @@ class PostController extends Controller
     	if ($request->eager_loaded == 'true') {
 
     		/*Eager load posts relation of user model*/
-    		$user = User::with('posts')->find(Auth::id());
+    		$user = User::with('posts')->remember(60 * 60)->find(Auth::id());
 
     		$posts = $user->posts;
 
     	} elseif ($request->eager_loaded == 'false') {
 
     		/*Find user model without eager loading posts relationship*/
-    		$user = User::find(Auth::id());
+    		$user = User::remember(60 * 60)->find(Auth::id());
 
     		$posts = $user->posts;
 
@@ -173,7 +173,7 @@ class PostController extends Controller
     	if ($request->eager_loaded == 'true') {
 
     		/*Eager load posts relation of user model*/
-    		$user = User::with('posts')->find(Auth::id());
+    		$user = User::with('posts')->remember(60 * 60)->find(Auth::id());
 
     		$user->posts()->update([
     			'description'	=> 'Updated with eager loading'
@@ -182,7 +182,7 @@ class PostController extends Controller
     	} elseif ($request->eager_loaded == 'false') {
 
     		/*Find user model without eager loading posts relationship*/
-    		$user = User::find(Auth::id());
+    		$user = User::remember(60 * 60)->find(Auth::id());
 
     		$user->posts()->update([
     			'description'	=> 'Updated without eager loading'
