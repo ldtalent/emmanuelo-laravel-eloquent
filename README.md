@@ -14,7 +14,27 @@
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects
 
 ## Installation
+Clone the repository to your server directory www or htdocs
 
+```Git 
+git clone https://github.com/learningdollars/emmanuelo-laravel-eloquent.git
+```
+Navigate to emmanuelo-laravel-eloquent and run the following commands on the terminal
+
+```Composer
+composer install
+```
+
+```Node
+npm install && npm run dev
+```
+
+```php
+php artisan serve
+```
+
+- Navigate to http://localhost:8000 to load the landing page
+- To visualize laravel telescope analytics, follow http://localhost:8000/telescope
 
 ## Collaboration
 
